@@ -1,0 +1,23 @@
+<div class="app-content content">
+  <div class="content-wrapper">
+    <div class="content-header row mb-1">
+      <app-breadcrumb class="col-12" [breadcrumb]="breadcrumb"></app-breadcrumb>
+    </div>
+    <div class="content-body">
+      <section id="drag-area">
+        <div class="row">
+          <div class="col-md-12" *blockUI="'changelog'; message: 'Loading'">
+            <m-card [options]="options" (reloadFunction)="reloadChangelog($event)">
+              <ng-container mCardHeaderTitle>
+                Dashboard
+              </ng-container>
+              <ng-container mCardBody>
+                Sample Dashboard
+              </ng-container>
+            </m-card>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
